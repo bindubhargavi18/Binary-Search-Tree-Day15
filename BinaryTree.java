@@ -15,6 +15,6 @@ public class BinaryTree
 		bst.add(3);
 		bst.add(16);
 		bst.add(63);
-		System.out.println("Size of tree: "+bst.size() );
+		System.out.println("Elements in tree: "+bst.size() );
 	}
 }

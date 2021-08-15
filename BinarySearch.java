@@ -3,6 +3,7 @@ package com.binary;
 public class BinarySearch <T extends Comparable<T>>
 {
 	TreeNode<T> root;
+	int size=0;
 	BinarySearch()
 	{
 		this.root=null;
@@ -11,6 +12,7 @@ public class BinarySearch <T extends Comparable<T>>
 	public void add(T data)
 	{
 		root=addElement(root,data);
+		size++;
 	}
 	
 	// Using recursion to add element into tree
@@ -30,6 +32,10 @@ public class BinarySearch <T extends Comparable<T>>
 			root.left=addElement(root.left,data);
 		}
 		return root;
+	}
+	public int size()
+	{
+		return size;
 	}
 
 }

@@ -33,9 +33,33 @@ public class BinarySearch <T extends Comparable<T>>
 		}
 		return root;
 	}
+	
 	public int size()
 	{
 		return size;
 	}
-
+	
+	public boolean search(T data)
+	{
+		return searchElement(root,data);
+	}
+	public boolean searchElement(TreeNode<T> root,T data)
+	{
+		if(root==null)
+		{
+			return false;
+		}
+		else if(data.compareTo(root.data)>0)
+		{
+			return searchElement(root.right,data);
+		}
+		else if(data.compareTo(root.data)<0)
+		{
+			return searchElement(root.left,data);
+		}
+		else
+		{
+			return true;
+		}	
+	}
 }
